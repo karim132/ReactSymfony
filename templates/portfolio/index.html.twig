@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PortfolioController!{% endblock %}
+
+{% block body %}
+
+ <div {{ react_component('Portfolio') }}></div> 
+
+
+        <main>
+        {# <h1>Les projets effectués en formation</h1>
+        <input type="text" placeholder="Entrez votre challenge"  onChange ={handleFilter} className='inputfilter'/><br/> #}
+         <ul id='liste'>
+           {# {% for item in projets %} #}
+                
+          
+         {# {{projets
+        .filter(projet=>projet.technology.toLowerCase().includes(filterChallenges))
+         .map((projet)=>(  #}
+             {% for item in projets %} 
+        <li>
+           <h1 className='nomprojet'>{{item.titre}}</h1> 
+           <h2>{{item.nom}}</h2>
+           <p>{{item.description}}</p>
+         </li> 
+           {% endfor %}
+         {# ))}} #}
+    </ul>
+   </main>
+
+{% endblock %}

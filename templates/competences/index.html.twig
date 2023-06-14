@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CompetencesController!{% endblock %}
+
+{% block body %}
+
+ {# <div {{ react_component('Competences') }}></div> #}
+        <main>
+            <h1>Les compétences acquises</h1>
+            <ul id='liste'>
+                {% for item in competences %}
+                   <li>{{item.nom}}</li>  
+                {% endfor %}
+                  {# <li key= {langage.id}>{langage.module}</li>  
+                ))} #}
+            </ul>
+           <hr/>
+            <h1>Mes expériences</h1>
+            <ul id='liste'>
+            {% for item in experiences %}
+                <li>{{item.nom}}</li>
+                {% endfor %}
+            </ul>
+            <hr/>
+            <h1>Les compétences hors informatique</h1>
+            <ul id='liste'>
+            {% for item in competencesHorsInformatique %}
+                <li>{{item.nom}}</li>
+             {% endfor %}
+            </ul>
+            <hr/>
+            <h1>Les hobbies</h1>
+            <ul id='liste'>
+              {% for item in hobbies %}
+            <li>{{item.nom}}</li>
+             {% endfor %}
+            </ul> 
+        </main>
+
+
+
+{% endblock %}
